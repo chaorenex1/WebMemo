@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API 配置</title>
+  <style>
+      body {
+          width: 320px;
+          padding: 15px;
+          font-family: Arial, sans-serif;
+      }
+      label {
+          display: block;
+          margin-top: 10px;
+          font-weight: bold;
+      }
+      input {
+          width: 100%;
+          padding: 8px;
+          margin-top: 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+      button {
+          width: 100%;
+          margin-top: 15px;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+      .save-btn {
+          background-color: #007bff;
+          color: white;
+      }
+      .save-btn:hover {
+          background-color: #0056b3;
+      }
+      .clear-btn {
+          background-color: #dc3545;
+          color: white;
+      }
+      .clear-btn:hover {
+          background-color: #a71d2a;
+      }
+      .status {
+          margin-top: 10px;
+          font-size: 14px;
+          color: green;
+          text-align: center;
+      }
+  </style>
+</head>
+<body>
+<h2>API 设置</h2>
+<label for="apiPath">API 路径:</label>
+<input type="text" id="apiPath" placeholder="https://api.example.com">
+
+<label for="apiKey">API Key:</label>
+<input type="text" id="apiKey" placeholder="your-api-key">
+
+<button class="save-btn" id="saveBtn">保存</button>
+<button class="clear-btn" id="clearBtn">清除</button>
+<p class="status" id="statusMsg"></p>
+
+<script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "Aduib Recorder",
+  "version": "1.0",
+  "description": "记录网页内容，给LLM使用",
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "permissions": ["webNavigation", "notifications","contextMenus","contentSettings", "activeTab","storage","scripting","declarativeContent","tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

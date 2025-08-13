@@ -27,4 +27,4 @@
 
 ## 许可
 
-MIT License
+Apache License 2.0

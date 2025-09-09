@@ -13,8 +13,12 @@
     "type": "git",
     "url": ""
   },
-  "keywords": [],
-  "author": "The Chrome Team",
+  "keywords": [
+    "AI",
+    "Record",
+    "History"
+  ],
+  "author": "chaorenex1",
   "license": "Apache 2.0",
   "bugs": {
     "url": ""

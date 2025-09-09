@@ -5,7 +5,17 @@
   "background": {
     "service_worker": "service-worker.js"
   },
-  "permissions": ["webNavigation", "notifications","contextMenus","contentSettings", "activeTab","storage","scripting","declarativeContent","tabs"],
+  "permissions": [
+    "webNavigation",
+    "notifications",
+    "contextMenus",
+    "contentSettings",
+    "activeTab",
+    "storage",
+    "scripting",
+    "declarativeContent",
+    "tabs"
+  ],
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_icon": "icon.png",

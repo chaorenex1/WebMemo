@@ -5,9 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const clearButton = document.getElementById('clearBtn');
   const statusMsg = document.getElementById('statusMsg');
   // 从 chrome.storage 读取数据
-  chrome.storage.sync.get(['apiPath', 'apiKey'], (data) => {
+  chrome.storage.local.get(['apiPath', 'apiKey'], (data) => {
     if (data.apiPath) apiPathInput.value = data.apiPath;
+    apiPathInput.disabled = true;
     if (data.apiKey) apiKeyInput.value = data.apiKey;
+    apiKeyInput.disabled = true;
   });
 
   // 保存数据
@@ -27,9 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    chrome.storage.sync.set({ apiPath, apiKey }, () => {
+    chrome.storage.local.set({ apiPath, apiKey }, () => {
       statusMsg.style.color = 'green';
       statusMsg.textContent = '设置已保存!';
+      apiPathInput.disabled = true;
+      apiKeyInput.disabled = true;
       setTimeout(() => {
         statusMsg.textContent = '';
       }, 2000);
@@ -38,7 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 清除数据
   clearButton.addEventListener('click', function () {
-    chrome.storage.sync.remove(['apiPath', 'apiKey'], () => {
+    chrome.storage.local.remove(['apiPath', 'apiKey'], () => {
+      apiPathInput.disabled = false;
+      apiKeyInput.disabled = false;
       apiPathInput.value = '';
       apiKeyInput.value = '';
       statusMsg.style.color = 'green';

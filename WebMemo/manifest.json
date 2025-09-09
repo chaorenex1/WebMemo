@@ -1,5 +1,5 @@
 {
-  "name": "Aduib Recorder",
+  "name": "Aduib WebMemo",
   "version": "1.0",
   "description": "记录网页内容，给LLM使用",
   "background": {
